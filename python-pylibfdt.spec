@@ -7,6 +7,7 @@ URL:		https://pypi.org/project/pylibfdt/
 License:	GPL
 Group:		Development/Python
 BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	swig
 
 %description
 Python binding for libfdt
