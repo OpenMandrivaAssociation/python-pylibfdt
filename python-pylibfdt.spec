@@ -1,6 +1,6 @@
 Name:		python-pylibfdt
-Version:	1.6.1
-Release:	2
+Version:	1.7.0.post1
+Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/p/pylibfdt/pylibfdt-%{version}.tar.gz
 Summary:	Python binding for libfdt
 URL:		https://pypi.org/project/pylibfdt/
