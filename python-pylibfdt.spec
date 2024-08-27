@@ -1,5 +1,5 @@
 Name:		python-pylibfdt
-Version:	1.7.0.post1
+Version:	1.7.0.post2
 Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/p/pylibfdt/pylibfdt-%{version}.tar.gz
 Summary:	Python binding for libfdt
