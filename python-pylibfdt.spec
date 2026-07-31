@@ -1,6 +1,6 @@
 Name:		python-pylibfdt
-Version:	1.7.0.post2
-Release:	3
+Version:	1.7.2.post1
+Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/p/pylibfdt/pylibfdt-%{version}.tar.gz
 Summary:	Python binding for libfdt
 URL:		https://pypi.org/project/pylibfdt/
@@ -14,7 +14,7 @@ BuildRequires:	swig
 Python binding for libfdt
 
 %prep
-%autosetup -p1 -n pylibfdt-%{version}
+%autosetup -p1 -n pylibfdt-1.7.2.post1
 
 %build
 %py_build
