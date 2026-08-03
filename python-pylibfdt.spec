@@ -27,3 +27,4 @@ Python binding for libfdt
 %{py_platsitedir}/_libfdt.*
 %{py_platsitedir}/libfdt.py
 %{py_platsitedir}/pylibfdt*.*-info
+%{python_sitearch}/__pycache__/libfdt.cpython-*.pyc
