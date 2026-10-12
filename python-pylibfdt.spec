@@ -19,6 +19,11 @@ Python binding for libfdt
 %autosetup -p1 -n pylibfdt-%{version}
 # The sdist pins the PyPI swig wrapper. The system swig binary is used instead.
 sed -i 's/,"swig==4\.4\.\*"//' pyproject.toml
+# The SWIG interface still calls the Python 2 C API.
+sed -i \
+	-e 's/PyString_FromString/PyUnicode_FromString/g' \
+	-e 's/PyInt_AsLong/PyLong_AsLong/g' \
+	libfdt/libfdt.i
 
 %build
 # The sdist is not a git checkout, so setuptools_scm needs the version.
