@@ -8,6 +8,7 @@ License:	GPL
 Group:		Development/Python
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(setuptools-scm)
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	swig
 
@@ -15,9 +16,13 @@ BuildRequires:	swig
 Python binding for libfdt
 
 %prep
-%autosetup -p1 -n pylibfdt-1.7.2.post1
+%autosetup -p1 -n pylibfdt-%{version}
+# The sdist pins the PyPI swig wrapper. The system swig binary is used instead.
+sed -i 's/,"swig==4\.4\.\*"//' pyproject.toml
 
 %build
+# The sdist is not a git checkout, so setuptools_scm needs the version.
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %py_build
 
 %install
